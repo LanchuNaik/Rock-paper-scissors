@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>R_P_S_dom</title>
+         <link rel="stylesheet" href="rock-paper-scissors.css">
+  </head>
+  <body>
+    <p class="game-name">Rock Paper Scissors</p>
+
+    <button onclick="playGame('Rock')"
+          class="move-icon-button">
+          <img src="icons/rock-emoji.png"class="move-icon" >
+    </button>
+
+    <button onclick="playGame('Paper')" 
+          class="move-icon-button">
+          <img src="icons/paper-emoji.png"class="move-icon">
+  </button>
+
+    <button onclick="playGame('Scissors')" 
+          class="move-icon-button">
+          <img src="icons/scissors-emoji.png" class="move-icon">
+  </button>
+  
+    <p class="js-result result" ></p>
+
+    <p class="js-moves "></p>
+   
+    <p class="js-score score"></p>
+
+    <button onclick="
+                    score.wins=0;
+                    score.losses=0;
+                    score.ties=0;
+                    localStorage.removeItem('score');
+                    updateScoreElement();"
+                    class="reset-button">
+  Reset Score</button>
+
+  <button onclick="autoPlay()"class="auto-play-button">Auto Play</button>
+
+  <script src="rock-paper-scissors.js"></script>
+  </body>
+</html>
